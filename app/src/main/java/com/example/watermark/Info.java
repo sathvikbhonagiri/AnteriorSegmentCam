@@ -53,7 +53,7 @@ public class Info extends AppCompatActivity  {
     public void savedata(String name,String phone,String email,String address,String pincode,String gender,int age)
     {
 
-        String url="https://script.google.com/macros/s/AKfycbzcBgL82EiQfeYPrFT0ahNM-bgIUWsXT1XUP7fYlkVZIDAmV8TWKfLP1gl65G5T7fAerg/exec?";
+        String url="your script url of google sheet";
         url=url+"action=create&name="+name+"&phone="+phone+"&email="+email+"&address="+address+"&pincode="+pincode+"&gender="+gender+"&age="+age;
 
         StringRequest stringRequest=new StringRequest(Request.Method.GET,url,new Response.Listener<String>(){
