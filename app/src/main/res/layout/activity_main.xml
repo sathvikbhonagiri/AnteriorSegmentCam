@@ -1,0 +1,100 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="176dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1.3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="336dp"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textureView"
+        app:layout_constraintEnd_toEndOf="@+id/textureView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textureView"
+        app:layout_constraintVertical_bias="0.477"
+        app:srcCompat="@drawable/circular_frame"
+        />
+
+    <RadioGroup
+        android:id="@+id/rgroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="56dp"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toTopOf="@+id/textureView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:buttonTint="#64cc4f"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+
+            android:id="@+id/tox"
+            android:button="@null"
+            android:layout_width="1dp"
+            android:background="@drawable/twox"
+            android:layout_height="85dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="56dp"
+            android:scaleType="fitCenter"
+            android:textColor="@color/white" />
+
+        <RadioButton
+            android:id="@+id/fox"
+            android:button="@null"
+            android:layout_width="1dp"
+            android:layout_height="85dp"
+            android:background="@drawable/fourx"
+            android:layout_weight="1"
+           android:scaleType="fitCenter"
+            android:textColor="@color/white" />
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/capture"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="64dp"
+        android:backgroundTint="@color/black"
+        android:contentDescription="capture"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@+id/textureView"
+        app:srcCompat="@drawable/camera_icon" />
+
+    <ImageButton
+        android:id="@+id/flashlight_button"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="48dp"
+        android:backgroundTint="@color/black"
+        android:contentDescription="flash"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/capture"
+        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textureView"
+        app:srcCompat="@drawable/flash_icon" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
